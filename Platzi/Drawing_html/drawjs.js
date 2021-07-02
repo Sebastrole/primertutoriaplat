@@ -1,3 +1,4 @@
+var hola;
 var d = document.getElementById("dibujo");
 var button_js = document.getElementById("button_");
 var text_digited_js = document.getElementById("text_digited");
