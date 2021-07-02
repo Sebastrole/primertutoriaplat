@@ -1,21 +1,32 @@
 var d = document.getElementById("dibujo");
+var button_js = document.getElementById("button_");
+var text_digited_js = document.getElementById("text_digited");
 var lienzito = d.getContext("2d");
-var TotalLines = 30
+button_js.addEventListener("click", draw_click);
 
-for (let i=0; i < TotalLines; i++) {
-    x_y = 0 + (10*i);
-    x_yreverse = 300 - (10*i);
-    DrawLine("black", 0, x_y, x_y, 300);
-    DrawLine("black", x_y, 0, 300, x_y);
-    DrawLine("black", x_yreverse, 0, 0, x_y);
-    DrawLine("black", 300, x_y, x_yreverse, 300);
+function draw_click() {
+    var Lineas = parseInt(text_digited_js.value);
+    var Space = d.width / Lineas
+    DrawAllLines(Lineas, Space);
 }
 
-function DrawLine(colour, xini, yini, xend, yend) {
+function DrawAllLines(Lineas, Space) {
+    for (let i=0; i < Lineas; i++) {
+    x_y = 0 + (Space*i);
+    x_yreverse = 300 - (Space*i);
+    DrawLine("black", 0, x_y, x_y, 300, 1);
+    DrawLine("black", x_y, 0, 300, x_y, 1);
+    DrawLine("black", x_yreverse, 0, 0, x_y, 1);
+    DrawLine("black", 300, x_y, x_yreverse, 300, 1);
+    }
+}
+
+function DrawLine(colour, xini, yini, xend, yend, lineWidth) {
     lienzito.beginPath();
     lienzito.strokeStyle = colour;
+    lienzito.lineWidth = lineWidth;
     lienzito.moveTo(xini,yini);
-    lienzito.lineTo(xend,yend);;
+    lienzito.lineTo(xend,yend);
     lienzito.stroke();
     lienzito.closePath();
 }
