@@ -1,0 +1,156 @@
+/*
+    QUITAR CONFIGURACION POR DEFECTO
+*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Old Standard TT', serif;
+    font-size: 13.5px;
+}
+
+nav {
+    border-top: .0625rem solid white;
+    border-bottom: .0625rem solid white;
+    position: sticky;
+    top: 0rem;
+}
+nav h4 {
+    color: white;
+    padding-left: 3.75rem;
+}
+
+nav ul {
+    display: flex;
+    margin-top: 0.1%;
+    margin-bottom: 0.1%;
+    padding-right: 2%;
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    padding-right: 1.25rem;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding-right: 1.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+/*
+    CENTRAR TODO Y QUE OCUPE TODA LA PANTALLA EL DIV CONTAINER
+*/
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    background-image: url(fondolares.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 .625rem .625rem rgba(55, 0, 255, 0.4);
+   
+}
+
+/*
+    IMAGEN
+*/
+
+.cajero img {
+    width: 90%;
+    height: 23.125rem;
+    border: black;
+    box-shadow: .625rem .9375rem .625rem .625rem rgba(7, 7, 7, .6);
+}
+
+/*
+   DIV BOTON. UBICACION BOTONES
+*/
+
+.botones {
+    position: relative;
+    bottom: 107px;
+    left: 19%;
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+    ANCHO Y ALTO BOTONES
+*/
+
+table .btn {
+    width: 2.3rem;
+    height: 1.8rem;
+}
+
+/*
+    NUMERO 0 OCUPE TODO EL ESPACIO
+*/
+
+#num0 {
+    width: 100%;
+}
+
+#tomedin {
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 10%;
+}
+
+#datosDin {
+    position: relative;
+    color: rgb(255, 255, 255);
+    bottom: 320px;
+    left: 16%;
+    width: 30%;
+
+}
+
+.resultadopant {
+    position: relative;
+    color: rgb(255, 255, 255);
+    bottom: 320px;
+    left: 24%;
+    width: 20%;
+}
+
+#botRetirar {
+    position: absolute;
+    bottom: 43%;
+    left: 50%;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+.resulbille {
+    width: 100%;
+    height: 100vh;
+    padding-left: 1%;
+    padding-right: 1%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+/* @media screen and (maxwidth:393px) {
+    .container-fluid{
+        background-color: black;
+    }
+} */
